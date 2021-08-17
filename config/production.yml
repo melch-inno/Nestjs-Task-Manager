@@ -1,2 +1,5 @@
+server:
+  origin: 'localhost'
+
 db:
   synchronize: false

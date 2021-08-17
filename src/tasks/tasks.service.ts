@@ -22,6 +22,7 @@ export class TasksService {
     const found = await this.taskRepository.findOne({
       where: { id: id, userId: user.id },
     });
+
     if (!found) {
       throw new NotFoundException(`Task with id ${id} not found`);
     }
@@ -50,6 +51,7 @@ export class TasksService {
       throw new NotFoundException(`Task with id ${id} not found`);
     }
     task.status = status;
-    return this.taskRepository.save(task);
+    await task.save();
+    return task;
   }
 }
