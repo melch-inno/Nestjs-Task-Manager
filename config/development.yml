@@ -1,0 +1,8 @@
+db:
+  host: 'localhost'
+  username: 'postgres'
+  password: 'ikoba777&'
+  synchronize: true
+
+jwt:
+  secret: 'nestjsTask01'
